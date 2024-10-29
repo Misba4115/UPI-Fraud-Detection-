@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - UPI Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .help-background {
+        background: url('{{ url_for("static", filename="images/5_UPI-is-your-New-Mobile-Banking-Heres-Why.jpg") }}') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .faq {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="logo">UPI Fraud Prediction</div>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('details') }}">Detect</a></li>
+                <li><a href="{{ url_for('help') }}">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <div class="help-background">
+        <h2>HELP</h2>
+
+        
+        <section class="faq-section">
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>How do I report online money fraud or UPI fraud?</h3>
+                    <button class="faq-toggle">▼</button>
+                </div>
+                <div class="faq-answer">
+                    <p>In case of online money fraud or UPI fraud, inform your bank immediately about the fraudulent charge. You can ask them to reverse the transaction or give you a refund.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>What happens if I get UPI scammed?</h3>
+                    <button class="faq-toggle">▼</button>
+                </div>
+                <div class="faq-answer">
+                    <p>If you have been the victim of a UPI scam, you must report the fraud to your local police station and register a complaint with the National Cyber Crime Reporting portal, either on the phone (Dial 1930 for the helpline) or via their website.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>Can UPI frauds be reversed?</h3>
+                    <button class="faq-toggle">▼</button>
+                </div>
+                <div class="faq-answer">
+                    <p>UPI frauds can be reversed, but it is important to act quickly. If you become a victim of a UPI fraud, immediately contact your bank and report the incident. They will guide you through the process of reversing the fraudulent transaction. It is crucial to provide all necessary details and evidence to support your claim.</p>
+                </div>
+            </div>
+
+            <div class="faq">
+                <div class="faq-question">
+                    <h3>How to File a UPI Fraud Complaint Online with RBI?</h3>
+                    <button class="faq-toggle">▼</button>
+                </div>
+                <div class="faq-answer">
+                    <p>To report a UPI fraud complaint with the RBI online, follow these steps:
+                        Step 1:  Go to the RBI's Cyber Crime Complaints portal.
+                        Step 2: Find the National Cyber Crime Reporting Portal (NCCRP) option and click on it.
+                        Step 3: Click on the ‘Register a Complaint’ option and select ‘Financial Fraud’.
+                        Step 4: Next, again, choose ‘Financial Fraud’ as the complaint category.  
+                        Step 5: Fill in your details and provide detailed incident information, including dates, the amount involved, and any relevant communication or evidence.
+                        Step 6: Submit supporting documents like screenshots or transaction records.
+                        Step 7: Review your information and submit the complaint.
+                        You will receive a unique complaint ID for tracking.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2024 UPI Fraud Detection. All Rights Reserved.</p>
+    </footer>
+
+    
+    <script>
+        const toggles = document.querySelectorAll('.faq-toggle');
+
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const answer = toggle.parentElement.nextElementSibling;
+                answer.classList.toggle('show');
+                toggle.textContent = answer.classList.contains('show') ? '▲' : '▼';
+            });
+        });
+    </script>
+</body>
+</html>
+
+

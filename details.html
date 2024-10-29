@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection - Detect</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        .detect-background {
+        background: url('{{ url_for("static", filename="images/beconnectedbackground.jpg") }}') no-repeat center center/cover;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #ffffff;
+    }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">UPI Fraud Prediction</div>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('details') }}">Detect</a></li>
+                <li><a href="{{ url_for('help') }}">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="detect-background">
+        <div class="detect-content">
+            <h2>DETAILS</h2>
+            <form class="detect-form" action="{{ url_for('details') }}" method="POST">
+                <label for="upi-id">UPI Number</label>
+                <input type="text" id="upi-id" name="upi-id" required>
+
+                <label for="transaction-amount">Transaction Amount</label>
+                <input type="number" step="any" id="transaction-amount" name="transaction-amount" required>
+
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="pincode">Pincode</label>
+                <input type="text" id="pincode" name="pincode" required>
+
+                <button type="submit" class="btn">Check</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UPI Fraud Detection. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
+

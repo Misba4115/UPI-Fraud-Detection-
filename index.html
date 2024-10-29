@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Fraud Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="script" href="{{ url_for('static', filename='script.js') }}"> 
+    <style>
+        .hero {
+        background-image: url('{{ url_for("static", filename="images/NPCI-Extends-UPI-Market-Cap-Compliance-Deadline-to-2024-Aiding-Digital-Payment-Growth.webp") }}');
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #ffffff;
+        position: relative;
+        text-align: left;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">UPI Fraud Prediction</div>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('details') }}">Detect</a></li>
+                <li><a href="{{ url_for('help') }}">Help</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        
+        <div class="hero-content">
+            <h1>Secure Your UPI Payments</h1>
+            <p>Detect and prevent fraud to safeguard your transactions.</p>
+        </div>
+    </section>
+
+    <!-- UPI Container Section -->
+    <section class="upi-container">
+        <div class="upi-section">
+            <h2>UNIFIED PAYMENT INTERFACE</h2>
+            <div class="upi-image">
+                <img src="{{ url_for('static', filename='images/rupee-symbol-UPI.jpg') }}" alt="UPI Image">
+            </div>
+            <div class="upi-content">
+                <p><b>What Is a Unified Payments Interface (UPI)?</b></p>
+                <p>A Unified Payments Interface (UPI) is a smartphone application that allows users to transfer money between bank accounts...</p>
+                <div class="read-more-container">
+                    <button id="readMoreBtn">Read More</button>
+                </div>
+                <div id="moreText" class="hidden">
+                    <p>How Unified Payments Interface (UPI) Works?
+                        The Unified Payments Interface is a real-time payment system. It is designed to enable peer-to-peer inter-bank transfers through a single two-click factor authentication process. The interface is regulated by the Reserve Bank of India (RBI), India's central bank. It works by transferring money between two bank accounts along with a mobile platform.
+                        UPI uses existing systems, such as Immediate Payment Service (IMPS) and Aadhaar Enabled Payment System (AEPS), to ensure seamless settlement across accounts. It facilitates push (pay) and pull (receive) transactions and even works for over the counter or barcode payments, as well as for multiple recurring payments such as utility bills, school fees, and other subscriptions.
+                        Once a single identifier is established, the system allows mobile payments to be delivered without the use of credit or debit cards, net banking, or any need to enter account details. This would not just ensure greater safety of sensitive information, but connect people who have bank accounts via smartphones to carry out hassle-free transactions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="upi-section">
+            <h2>HOW UPI FRAUD OCCURS?</h2>
+            <div class="upi-image">
+                <img src="{{ url_for('static', filename='images/AA1neJbu.jpeg') }}" alt="UPI Fraud Image">
+            </div>
+            <div class="upi-content">
+                <p><b>UPI Frauds</b></p>
+                <p>UPI fraud is a serious issue that can have devastating consequences for victims...</p>
+                <div class="read-more-container">
+                    <button class="readMoreBtn">Read More</button>
+                </div>
+                <div class="moreText hidden">
+                    <p>UPI fraud is a serious issue that can have devastating consequences for victims. This type of fraud can take many forms, from online scams to phone fraud. It is important to be aware of the different types of UPI fraud and how to protect yourself from becoming a victim.
+                        Types of UPI Fraud:
+                        - **Phone fraud:** Criminals use the telephone to try to steal your money or personal information. They may call you and claim to be from a legitimate organization, such as your bank or the IRS.
+                        - **Online scams:** Scammers often use fake websites or emails to try to trick people into giving them their personal information or money.
+                        - **Phone scams:** Similar to phone fraud, scammers call people and try to trick them into giving them their personal information or money.
+                        - **SMS scams:** Similar to online scams, scammers often use fake text messages to try to trick people into giving them their personal information or money.
+                        - **ATM scams:** Scammers try to steal money from people by using fake ATMs or by stealing their bank card.
+                        - **Credit card scams:** Scammers try to steal people's credit card information.
+                        - **Phishing scams:** Scammers try to get people's personal information by sending them fake emails or text messages.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 UPI Fraud Detection. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
