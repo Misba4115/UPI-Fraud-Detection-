@@ -1,9 +1,10 @@
+
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
 import datetime
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 # Load the dataset
 df = pd.read_csv(r'UPI_Fraud_Dataset_Expanded.csv', index_col=0)
@@ -65,5 +66,5 @@ def result():
 def help():
     return render_template('help.html')
 
-if _name_ == '_main_':
+if __name__ == '_main_':
     app.run(debug=True)
